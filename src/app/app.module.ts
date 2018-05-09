@@ -5,12 +5,16 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    EmployeeComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
