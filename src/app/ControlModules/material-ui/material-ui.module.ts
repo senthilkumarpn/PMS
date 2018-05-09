@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatMenuModule} from '@angular/material/menu';
+import {
+  MatMenuModule,
+  MatButtonModule
+} from '@angular/material';
 
 
 @NgModule({
@@ -8,6 +11,9 @@ import {MatMenuModule} from '@angular/material/menu';
     CommonModule
   ],
   declarations: [],
-  exports:[]
+  exports: [
+    MatMenuModule,
+    MatButtonModule
+  ]
 })
 export class MaterialUIModule { }
