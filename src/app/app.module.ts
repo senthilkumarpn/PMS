@@ -7,6 +7,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import {MaterialUIModule} from './ControlModules/material-ui/material-ui.module';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialUIModule
   ],
   providers: [],
   bootstrap: [AppComponent]
