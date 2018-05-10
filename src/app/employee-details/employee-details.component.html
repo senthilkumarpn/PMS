@@ -1,0 +1,30 @@
+<div>
+  <span>id: </span>{{employee.id}}
+</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="employee.name" placeholder="name">
+    </label>
+  </div>
+  <div>
+      <label>department:
+        <input [(ngModel)]="employee.deptarment" placeholder="department">
+      </label>
+  </div>
+  <div>
+      <label>company:
+        <input [(ngModel)]="employee.company" placeholder="company name">
+      </label>
+  </div>  
+  <div>
+      <label>Branch:
+        <input [(ngModel)]="employee.branch" placeholder="branch">
+      </label>
+  </div>  
+  <div>
+      <label>Email:
+        <input [(ngModel)]="employee.email" placeholder="email">
+      </label>
+  </div>  
+<button (click)="saveEmployee">Save</button>
+<button (click)="resetEmployee">Clear</button>
