@@ -9,6 +9,8 @@ import {MaterialUIModule} from './Modules/ControlModules/material-ui/material-ui
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import {RouteModule} from './Modules/route/route.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { EmployeeComponent } from './components/employee/employee.component';
+import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    EmployeeComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     RouteModule,
