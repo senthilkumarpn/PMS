@@ -1,7 +1,39 @@
+<div style="padding-top:5%;" class="docs-component-viewer-content">
+<div>Employee Id</div>
 <div>
-  <form >
 <mat-form-field >
     <input matInput placeholder="Name" value="">
-  </mat-form-field>
-</form>
+</mat-form-field>
+</div>
+<div>
+<mat-form-field >
+    <input matInput placeholder="Company" value="">
+</mat-form-field>
+</div>
+<div>
+<mat-form-field >
+    <input matInput placeholder="Department" value="">
+</mat-form-field>
+</div>
+<div>
+<mat-form-field >
+    <input matInput placeholder="Branch" value="">
+</mat-form-field>
+</div>
+<div>
+<mat-form-field >
+    <input matInput placeholder="Email Id" value="">
+</mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+        <input matInput [matDatepicker]="myDatepicker">
+        <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #myDatepicker></mat-datepicker>
+      </mat-form-field>
+</div>
+<div>
+<button mat-button>Save</button>
+<button mat-button>Clear</button>
+</div>
 </div>

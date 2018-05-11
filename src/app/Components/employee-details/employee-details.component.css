@@ -7,3 +7,9 @@
   .full-width {
     width: 100%;
   } */
+
+
+  .docs-component-viewer-content {
+    position: relative;
+    min-height: 500px;
+  }
