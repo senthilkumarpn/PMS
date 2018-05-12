@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "docs": "node_modules/.bin/compodoc -p src/tsconfig.app.json -s --port 3000 -d docs",
+    "serve-docs": "ng build && npm run docs"
   },
   "private": true,
   "dependencies": {
