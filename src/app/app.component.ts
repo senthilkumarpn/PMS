@@ -8,22 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styles: [`
-  .example-container {
-    position: absolute;
-    top: 60px;
-    bottom: 60px;
-    left: 0;
-    right: 0;
-  }
-  .example-sidenav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    background: rgba(255, 0, 0, 0.5);
-  }
-  `],
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'app';
@@ -35,5 +20,4 @@ export class AppComponent {
       'bottom': 0,
     });
   }
-  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
 }

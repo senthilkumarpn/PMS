@@ -8,15 +8,6 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
    ApplicationName = 'PMS';
-   @Output() onLogoClickEvent = new EventEmitter<boolean>();
-   toggler =false;
   constructor() { }
-
-  ngOnInit() {
-    
-  }
-  onLogoClick(){
-    this.onLogoClickEvent.emit(!!this.toggler);
-  }
-
+  ngOnInit() {}
 }

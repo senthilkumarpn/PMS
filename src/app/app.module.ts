@@ -11,6 +11,8 @@ import {RouteModule} from './Modules/route/route.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component';
+import { MenuitemComponent } from './components/shared/menuitem/menuitem.component';
+import { MenulistComponent } from './components/shared/menulist/menulist.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { EmployeeDetailsComponent } from './components/employee-details/employee
     HeaderComponent,
     DashboardComponent,
     EmployeeComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    MenulistComponent,
+    MenuitemComponent,
   ],
   imports: [
     RouteModule,
