@@ -4,4 +4,19 @@ export interface INavItem {
     route?: string;
     children?: INavItem[];
   }
-  //remove this line later
+
+export interface ISideNavheader {
+  title: string;
+  desc: string;
+}
+export interface ISideNavContent {
+  islink: boolean;
+  routeLink: string;
+  text: string;
+}
+export interface ISideNavItem
+  {
+    header: ISideNavheader;
+    content: ISideNavContent;
+    children?: ISideNavItem[];
+  }

@@ -1,6 +1,6 @@
 .example-container {
     position: absolute;
-    top: 60px;
+    top: 90px;
     bottom: 60px;
     left: 0;
     right: 0;
@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     width: 200px;
-    background: rgba(255, 0, 0, 0.5);
+    background: rgba(221, 221, 221, 0.849);
   }
   
   .example-header {

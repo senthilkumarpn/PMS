@@ -1,0 +1,43 @@
+<!-- <mat-sidenav-container class="example-container"> -->
+    <mat-sidenav #sidenav mode="side" opened="true" class="example-sidenav"
+                 [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
+                 [fixedBottomGap]="options.value.bottom" style="display: block;width:320px;"
+                 [mode]="mobileQuery.matches ? 'over' : 'side'">
+    <!-- <mat-nav-list>
+      <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
+    </mat-nav-list> -->
+    <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Personal data
+            </mat-panel-title>
+            <mat-panel-description>
+              Type your name and age
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <mat-form-field>
+            <input matInput placeholder="First name">
+          </mat-form-field>
+      
+          <mat-form-field>
+            <input matInput placeholder="Age">
+          </mat-form-field>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Self aware panel
+            </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-sidenav>
+
+  <!-- </mat-sidenav-container> -->

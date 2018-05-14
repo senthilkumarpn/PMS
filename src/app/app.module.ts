@@ -13,6 +13,7 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component';
 import { MenuitemComponent } from './components/shared/menuitem/menuitem.component';
 import { MenulistComponent } from './components/shared/menulist/menulist.component';
+import { SideNavComponent } from './Components/Shared/side-nav/side-nav.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { MenulistComponent } from './components/shared/menulist/menulist.compone
     EmployeeDetailsComponent,
     MenulistComponent,
     MenuitemComponent,
+    SideNavComponent,
   ],
   imports: [
     RouteModule,

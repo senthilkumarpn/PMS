@@ -2,25 +2,31 @@
   <mat-toolbar class="example-header"><mat-icon (click)="sidenav.toggle()">menu</mat-icon>
     <app-header [sidenavRef]='sidenav'></app-header>
   </mat-toolbar>
-
-  <mat-sidenav-container class="example-container">
+ <mat-sidenav-container class="example-container">
     <mat-sidenav #sidenav mode="side" opened="true" class="example-sidenav"
                  [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
-                 [fixedBottomGap]="options.value.bottom">
-      {{options.value.fixed ? 'Fixed' : 'Non-fixed'}} Sidenav
+                 [fixedBottomGap]="options.value.bottom" style="display: block;width:320px;"
+                 [mode]="mobileQuery.matches ? 'over' : 'side'">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let sidemenu of sideMenuList">
+          <mat-expansion-panel-header>
+              <mat-panel-title>{{sidemenu.header.title}}</mat-panel-title>
+              <mat-panel-description>{{sidemenu.header.desc}}</mat-panel-description>
+          </mat-expansion-panel-header>
+            <div *ngIf="sidemenu.content.islink">
+                <a  routerLink="sidemenu.content.routeLink">{{sidemenu.content.text}}</a>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
     </mat-sidenav>
     <mat-sidenav-content [formGroup]="options">
-      <p>Main Content</p>
-      <p><mat-checkbox formControlName="fixed">Fixed</mat-checkbox></p>
-      <p><mat-form-field>
-        <input matInput type="number" formControlName="top" placeholder="Top gap">
-      </mat-form-field></p>
-      <p><mat-form-field>
-        <input matInput type="number" formControlName="bottom" placeholder="Bottom gap">
-      </mat-form-field></p>
-      <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-      <router-outlet></router-outlet>
+        <mat-card>
+            <p>content place holder</p>
+            <router-outlet></router-outlet>
+        </mat-card>
     </mat-sidenav-content>
-  </mat-sidenav-container>
-  <mat-toolbar class="example-footer"><app-footer></app-footer></mat-toolbar>
+  </mat-sidenav-container> 
+  <mat-toolbar class="example-footer">
+    <app-footer></app-footer>
+  </mat-toolbar>
 </ng-container>
