@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material';
 
 
 @Component({
@@ -8,6 +9,7 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
    ApplicationName = 'PMS';
+   @Input() private sidenavRef: MatSidenav;
   constructor() { }
   ngOnInit() {}
 }

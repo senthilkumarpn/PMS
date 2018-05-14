@@ -1,15 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<ng-container *ngIf="shouldRun">
+  <mat-toolbar class="example-header"><mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    <app-header [sidenavRef]='sidenav'></app-header>
+  </mat-toolbar>
 
-<!-- <ng-container > -->
- 
-  <!-- <mat-sidenav-container class="example-container">
+  <mat-sidenav-container class="example-container">
     <mat-sidenav #sidenav mode="side" opened="true" class="example-sidenav"
                  [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
                  [fixedBottomGap]="options.value.bottom">
       {{options.value.fixed ? 'Fixed' : 'Non-fixed'}} Sidenav
     </mat-sidenav>
-
     <mat-sidenav-content [formGroup]="options">
+      <p>Main Content</p>
       <p><mat-checkbox formControlName="fixed">Fixed</mat-checkbox></p>
       <p><mat-form-field>
         <input matInput type="number" formControlName="top" placeholder="Top gap">
@@ -18,13 +19,8 @@
         <input matInput type="number" formControlName="bottom" placeholder="Bottom gap">
       </mat-form-field></p>
       <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
-  </mat-sidenav-container> -->
-  <app-header></app-header>
-  <ng-container >
-  <router-outlet>
-
-  </router-outlet>
-  </ng-container>
-  <app-footer></app-footer>
-<!-- </ng-container> -->
+  </mat-sidenav-container>
+  <mat-toolbar class="example-footer"><app-footer></app-footer></mat-toolbar>
+</ng-container>
