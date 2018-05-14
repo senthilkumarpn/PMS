@@ -3,15 +3,25 @@
       Dashboard
   </span>
 </mat-toolbar>
-<div style="padding:40px;font-size:30px">
-  <div *ngFor="let i of this.count;">
-      <div class="row" style="margin-bottom: 3px;">
-          <div class="col-sm-2" style="background-color:gainsboro;">&nbsp;</div>
-          <div class="col-sm-2" style="background-color:lightgrey;">&nbsp;</div>
-          <div class="col-sm-2" style="background-color:gainsboro;">&nbsp;</div>
-          <div class="col-sm-2" style="background-color:lightgrey;">&nbsp;</div>
-          <div class="col-sm-2" style="background-color:gainsboro;">&nbsp;</div>
-          <div class="col-sm-2" style="background-color:lightgrey;">&nbsp;</div>
-      </div>
-  </div>
-</div>
+<mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    secondo Expansion
+                </mat-panel-title>
+                <mat-panel-description>
+                    Type your name and age
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-tab-group>
+                <mat-tab label="Tab 1"> nested content tab 1
+                </mat-tab>
+                <mat-tab label="Tab 2">nested content tab 2
+                </mat-tab>
+                <mat-tab label="Tab 3">nested content tab 3</mat-tab>
+                <mat-tab label="Tab 4">nested content tab 4</mat-tab>
+                <mat-tab label="Tab 5">nested content tab 5</mat-tab>
+                <mat-tab label="Tab 6">nested content tab 6</mat-tab>
+            </mat-tab-group>
+        </mat-expansion-panel>
+    </mat-accordion>

@@ -14,14 +14,14 @@
               <mat-panel-description>{{sidemenu.header.desc}}</mat-panel-description>
           </mat-expansion-panel-header>
             <div *ngIf="sidemenu.content.islink">
-                <a  routerLink="sidemenu.content.routeLink">{{sidemenu.content.text}}</a>
+                <input matButton type="button" title={{sidemenu.content.text}}>
+                <a  routerLink={{sidemenu.content.routeLink}}>{{sidemenu.content.text}}</a>
             </div>
         </mat-expansion-panel>
     </mat-accordion>
     </mat-sidenav>
     <mat-sidenav-content [formGroup]="options">
         <mat-card>
-            <p>content place holder</p>
             <router-outlet></router-outlet>
         </mat-card>
     </mat-sidenav-content>

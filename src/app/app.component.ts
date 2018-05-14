@@ -21,21 +21,21 @@ export class AppComponent implements OnDestroy {
 
   sideMenuList: ISideNavItem[] = [
     {
-      header:{title:'Dashboard',desc:"dashboard for PMS"},
-      content:{islink:true,routeLink:'dashboard',text:'dashboard'},
+      header:{title:'Dashboard',desc:"desc"},
+      content:{islink:true,routeLink:'/dashboard',text:'dashboard'},
       children:[],
     },
     {
-      header:{title:'Employee Details',desc:"Employee detailsdescription"},
-      content:{islink:true,routeLink:'employee',text:'employee'},
+      header:{title:'Employee Details',desc:"desc"},
+      content:{islink:true,routeLink:'/employee',text:'employee'},
       children:[],
     },
     {
-      header:{title:'Employee Details ',desc:"Employee details description"},
-      content:{islink:true,routeLink:'employeedetails',text:'employeedetails'},
+      header:{title:'Employee Details ',desc:"desc"},
+      content:{islink:true,routeLink:'/employeedetails',text:'employeedetails'},
       children:[],
     },{
-      header:{title:'Header Title',desc:"description"},
+      header:{title:'Header Title',desc:"desc"},
       content:{islink:true,routeLink:'',text:'WELCOME'},
       children:[],
     }
