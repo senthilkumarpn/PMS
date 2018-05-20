@@ -12,8 +12,9 @@ export class MongodbService {
   result: any;
   headers: any;
   options: RequestOptions;
-  apiUrl : 'http://localhost:4300/api';
+  apiUrl:any;
   constructor(private _http: Http, private httpClient: HttpClient) {
+    this.apiUrl= 'http://localhost:3000/api';
     this.headers = new Headers(
       {
         'Content-Type' : 'application/json',
@@ -29,5 +30,16 @@ export class MongodbService {
   getTenantByHostName(HostName: string): Observable<any[]> {
     return this._http.get(this.apiUrl + '/getTenantByHostName/'+ HostName).pipe(map((result: Response) => result.json()));
   }
-
+  getUsers():Observable<any[]>{
+    return this._http.get(this.apiUrl + '/users').pipe(map((result)=>result.json()));
+  }
+  login(username:string,password:string):Observable<any>{
+    debugger;
+    let body = JSON.stringify({name:username,password:password});
+    return this._http.post(this.apiUrl+"/login",body,this.options).pipe(map((result) => result.json()));
+  }
+  authenticate(username:string,password:string):Observable<any>{
+    let body = JSON.stringify({name:username,password:password});
+    return this._http.post(this.apiUrl+"/authenticate",body,this.options).pipe(map((result) => result.json()));
+  }
 }

@@ -4,6 +4,10 @@
     </span>
   </mat-toolbar>
 <div class="example-container mat-elevation-z8">
+    <ul>
+        <li *ngFor="let user of users"><span>{{user.name}}</span></li>
+    </ul>
+    <p>{{loginDetail.token}}</p>
     <table mat-table #table [dataSource]="dataSource">
   
       <!-- Checkbox Column -->

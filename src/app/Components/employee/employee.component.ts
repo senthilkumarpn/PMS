@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {MaterialUIModule} from '../../Modules/ControlModules/material-ui/material-ui.module';
+import {MaterialUIModule} from '../../_modules/index';
 import {MatTableDataSource} from '@angular/material';
 import {SelectionModel} from '@angular/cdk/collections';
+import {MongodbService} from '../../_services/index';
 
 @Component({
   selector: 'app-employee',
@@ -9,12 +10,23 @@ import {SelectionModel} from '@angular/cdk/collections';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
-
-  constructor() { }
-
+   users:any[];
+   loginDetail:any;
+  constructor(private mongoservice:MongodbService) { 
+    // mongoservice.getUsers().subscribe(result=>{
+    //   this.users=result.data;
+    // });
+    // mongoservice.login("senthilkumar.p","sasa123").subscribe(d=>{
+    //   debugger;
+    //   this.loginDetail = d;
+    // });
+    mongoservice.authenticate("senthilkumar","India$123").subscribe(d=>{
+      debugger; 
+      this.loginDetail = d;
+    });
+  }
   ngOnInit() {
   }
-
   displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
   selection = new SelectionModel<Element>(true, []);
