@@ -13,8 +13,10 @@ export class MongodbService {
   headers: any;
   options: RequestOptions;
   apiUrl:any;
+  mongoAPIUrl:any;
   constructor(private _http: Http, private httpClient: HttpClient) {
     this.apiUrl= 'http://localhost:3000/api';
+    this.mongoAPIUrl='http://localhost:3000/mongodb';
     this.headers = new Headers(
       {
         'Content-Type' : 'application/json',
@@ -41,5 +43,8 @@ export class MongodbService {
   authenticate(username:string,password:string):Observable<any>{
     let body = JSON.stringify({name:username,password:password});
     return this._http.post(this.apiUrl+"/authenticate",body,this.options).pipe(map((result) => result.json()));
+  }
+  getProducts(): Observable<any>{
+    return this._http.get(this.mongoAPIUrl + '/Products').pipe(map((result) => result.json()));
   }
 }

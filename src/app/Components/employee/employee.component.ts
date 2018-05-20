@@ -20,9 +20,16 @@ export class EmployeeComponent implements OnInit {
     //   debugger;
     //   this.loginDetail = d;
     // });
-    mongoservice.authenticate("senthilkumar","India$123").subscribe(d=>{
+    mongoservice.getProducts().subscribe(data=>{
+      debugger;
+      console.log(data);
+    });
+    mongoservice.authenticate("senthilkumar","India$123").subscribe(data=>{
       debugger; 
-      this.loginDetail = d;
+      this.loginDetail = data;
+      if(data.success){
+        localStorage.setItem("auth_token",data.token);
+      }
     });
   }
   ngOnInit() {

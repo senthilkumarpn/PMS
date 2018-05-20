@@ -18,6 +18,9 @@ import { SideNavComponent } from './Components/Shared/side-nav/side-nav.componen
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
+/* Interceptors */
+import {HttpInterceptorForJWTService} from './_services/index';
+
 import { MongodbService} from './_services/index';
 import { LoginComponent } from './login/login.component';
 
@@ -35,16 +38,16 @@ import { LoginComponent } from './login/login.component';
     LoginComponent,
   ],
   imports: [
-    RouteModule,
     BrowserModule,
     BrowserAnimationsModule,
     MaterialUIModule,
     FormsModule, 
     ReactiveFormsModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    RouteModule,
   ],
-  providers: [MongodbService],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass:HttpInterceptorForJWTService, multi:true} , MongodbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,7 +7,9 @@
     <ul>
         <li *ngFor="let user of users"><span>{{user.name}}</span></li>
     </ul>
-    <p>{{loginDetail.token}}</p>
+    <div *ngIf="loginDetail">
+        <p>{{loginDetail.token}}</p>
+    </div>
     <table mat-table #table [dataSource]="dataSource">
   
       <!-- Checkbox Column -->
