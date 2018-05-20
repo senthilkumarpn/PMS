@@ -4,10 +4,12 @@ import { DashboardComponent } from '../../Components/dashboard/dashboard.compone
 import { EmployeeDetailsComponent } from '../../components/employee-details/employee-details.component';
 import { EmployeeComponent } from '../../components/employee/employee.component';
 import { LoginComponent } from '../../login/login.component';
+import { RegisterComponent } from '../../register';
 
 const routes: Routes = [
  { path:'',component:LoginComponent } ,
  { path:'login',component:LoginComponent } ,
+ { path:'register',component:RegisterComponent } ,
  { path:'dashboard',component:DashboardComponent } ,
  { path:'employeedetails',component:EmployeeDetailsComponent },
  { path:'employee',component:EmployeeComponent }

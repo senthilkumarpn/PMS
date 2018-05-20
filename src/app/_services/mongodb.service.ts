@@ -47,4 +47,11 @@ export class MongodbService {
   getProducts(): Observable<any>{
     return this._http.get(this.mongoAPIUrl + '/Products').pipe(map((result) => result.json()));
   }
+  registerUser(username: String, password: String): Observable<any>{
+    let body = JSON.stringify({name:username,password:password,status:'A'});
+    return this._http.post(this.mongoAPIUrl+"/Applicationusers",body,this.options).pipe(map((result)=>{
+      result.json();
+    }));
+  }
+
 }

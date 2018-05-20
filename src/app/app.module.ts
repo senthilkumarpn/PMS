@@ -23,6 +23,9 @@ import {HttpInterceptorForJWTService} from './_services/index';
 
 import { MongodbService} from './_services/index';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { AccessDeniedComponent } from './components/shared/Error-pages/access-denied/access-denied.component';
+import { ErrorPagesComponent } from './components/shared/Error-pages/error-pages/error-pages.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +39,15 @@ import { LoginComponent } from './login/login.component';
     MenuitemComponent,
     SideNavComponent,
     LoginComponent,
+    RegisterComponent,
+    AccessDeniedComponent,
+    ErrorPagesComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialUIModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     HttpModule,
     HttpClientModule,
